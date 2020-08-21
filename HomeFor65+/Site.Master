@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HomeFor65_.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/General.css" rel="stylesheet" type="text/css" />
+     <script>
+        var imgno = 1;
+        function myslider()
+        {
+            if (imgno == 4)
+            {
+                imgno = 1;
+            }
+            document.getElementById("imgslide").src = "Images/" + imgno + ".jpg";
+            imgno++;
+            window.setTimeout("myslider()", 2000);
+        }
+    </script>
+</head>
+<body onload="myslider()">
+    <form id="form1" runat="server">
+        <div  id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <img src="Images/logo3.png" width="100%" height="100px" />
+            </div>
+            <div id="sitetitle">
+                &nbsp;&nbsp;&nbsp;&nbsp;Solution For 65+
+               <sub style="color:dimgrey;font-style:italic;
+  font-size: 25px;">The Ultimate Home for retired..!</sub>
+            </div>
+        </div>
+            <div id="menu">
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                <DynamicHoverStyle BackColor="#3366CC" Font-Underline="True" />
+                <DynamicMenuItemStyle BackColor="#006666" Font-Size="X-Large" ForeColor="white" HorizontalPadding="10px" VerticalPadding="5px" />
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Our Services" Value="Our Services" NavigateUrl="~/Services.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Rules and Regulations" Value="Rules" NavigateUrl="~/Rules.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Contribute Here" Value="Rules" NavigateUrl="~/Donate.aspx"></asp:MenuItem>
+                    </Items>
+                <StaticHoverStyle BackColor="#66CCFF" Font-Underline="True" BorderStyle="None" />
+                <StaticMenuItemStyle Font-Size="X-Large" ForeColor="white" HorizontalPadding="30px" VerticalPadding="5px" />
+                    </asp:Menu>
+                </div>
+            <div id="slider">
+            <img id="imgslide" width="100%" height ="220px" />
+        </div>
+            <div id="heading">
+                  <asp:ContentPlaceHolder ID="CPHHeading" runat="server">
+                     
+                  </asp:ContentPlaceHolder>
+              </div>
+              <div id="content">
+                  <asp:ContentPlaceHolder ID="CPHContent" runat="server">
+
+                  </asp:ContentPlaceHolder>
+              </div>
+            <div id="footer">
+                <fieldset>
+                <legend>Contact Us</legend>
+             Address: Opp Iqra Model Public School, 
+             Near Eidgah Ghazipur, Uttar Pradesh <br />
+             Pin-233023, Mobile: 8899666774, <br />
+             Email: info@home65.com, Website: www.home65.com
+                </fieldset>
+                </div>
+            </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿body {
+    text-align: center;
+}
+
+#wrapper {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: left;
+}
+#logo {
+    width: 13%;
+    height: 100px;
+    float: left;
+    background-color: slategrey;
+}
+#sitetitle {
+    width: 87%;
+    height: 100px;
+    background-color: White;
+    color: darkslategray;
+    text-align: left;
+    font-size: 40px;
+}
+#menu {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+#main {
+    width: 100%;
+    min-height: 500px;
+    background-color: #FF9933;
+}
+#heading {
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: sienna;
+}
+#content {
+    width: 100%;
+    min-height: 480px;
+    background-color:sienna;
+    color: white;
+    font-size: 20px;
+}
+#header {
+    width: 100%;
+    height: 100px;
+}
+#footer {
+    width: 100%;
+   min-height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size:20px;
+}
